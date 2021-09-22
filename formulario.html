@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1>Registro para vacunación COVID-19</h1>
+    <form action=""method="GET">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label>Nombre: </label>
+            <input types="text" name="Nombre" id="">
+            <br><br>
+            <label>Usuario: </label>
+            <input type="text" name="usuario" id="">
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Información adicional</legend>
+            <label>Sexo: </label>
+            <input type="radio" name="Sexo" id="">
+            Mujer
+            <input type="radio" name="Sexo" id="">
+            Hombre
+            <br><br>
+            <label>Correo: </label>
+            <input type="email" name="Correo" id="">
+            <br><br>
+            <label>Contraseña: </label>
+            <input type= "password" name="Clave" id="">
+            <br><br>
+
+            <label for="Cargo"> Rol en el equipo </label>
+            <select name="Cargo" id="">
+                <option value="" selected="selected">selecciona</option>
+                <option value="">programador</option>
+                <option value="">analista</option>
+                <option value="">soporte tecnico</option>
+                <option value="">otro</option>
+            </select>
+        </fieldset>
+        <br><br>
+        <p>
+            <input type="checkbox" name="Condiciones" id="">
+            "Acepto terminos y Condiciones"
+        </p>
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
