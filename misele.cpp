@@ -8,8 +8,8 @@ struct Sele {
     int edad;
 };
 
-void llenar(Sele &jugador) {
-    cout << "Ingrese nombre: ";
+void llenar(Sele &jugador) {  //puntero para editar directamente sobre el objeto
+    cout << "Ingrese nombre: "; 
     cin >> jugador.nombre;
     cout << "Ingrese edad: ";
     cin >> jugador.edad;
@@ -17,7 +17,7 @@ void llenar(Sele &jugador) {
 
 void mostrar(Sele jugador[], int cant) {
     cout << "Datos ingresados:" << endl;
-    for (int i = 0; i < cant; i++) {
+    for (int i = 0; i < cant; i++) { //ciclo para que aprezca el num de jug
         cout << "Jugador " << (i + 1) << ":" << endl;
         cout << "Nombre: " << jugador[i].nombre << endl;
         cout << "Edad: " << jugador[i].edad << endl;
@@ -43,7 +43,7 @@ void guardar(Sele jugador[], int cant) {
 int main() {
     int cant, op;
 
-    cout << "¿Cuántos jugadores ingresará? ";
+    cout << "Â¿CuÃ¡ntos jugadores ingresarÃ¡? ";
     cin >> cant;
 
     Sele jugadores[100];
@@ -54,12 +54,12 @@ int main() {
         cout << "2. Mostrar datos de jugadores" << endl;
         cout << "3. Guardar datos en archivo" << endl;
         cout << "4. Salir" << endl;
-        cout << "Ingrese opción: ";
+        cout << "Ingrese opciÃ³n: ";
         cin >> op;
 
         switch (op) {
             case 1:
-                for (int i = 0; i < cant; i++) {
+                for (int i = 0; i < cant; i++) { //para limitar los jugs
                     cout << "\nJugador " << (i + 1) << ":" << endl;
                     llenar(jugadores[i]);
                 }
@@ -78,7 +78,7 @@ int main() {
                 break;
 
             default:
-                cout << "Opción inválida. Intente de nuevo." << endl;
+                cout << "OpciÃ³n invÃ¡lida. Intente de nuevo." << endl;
         }
     } while (op != 4);
 
